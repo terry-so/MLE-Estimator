@@ -13,7 +13,6 @@ def mle_exponential(data):
     data = np.array(data)
     return (1 / np.mean(data),)
 
-#https://colab.research.google.com/drive/1NYditcln3OTiOF7qpY1kMbunKx26291H (course note)
 def mle_gamma(data):
     data = np.array(data)
     mean_log_data = np.mean(np.log(data))
@@ -97,5 +96,6 @@ def gof_test(data, dist_name, alpha):
         result = "reject"
     elif chi2_stat <= crit:
         result = "fail to reject"  
+
 
     return (chi2_stat, result)
